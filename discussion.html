@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AgroTech</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/agriculture_0.png" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://localhost:44323/javascript/weavy.js"></script>
+</head>
+
+<body>
+    <head-section></head-section>
+    <pop-up></pop-up>
+    <script src="js/header.js"></script>
+    <h2>Discussion</h2>
+    <div id="feed-placeholder" style="z-index: -999; height: 100vh;"></div>
+
+
+
+    <script>
+        var sub = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZW1vdXNlciIsIm5hbWUiOiJEZW1vIFVzZXIiLCJleHAiOjI1MTYyMzkwMjIsImlzcyI6ImNsaWVudGlkIiwiZW1haWwiOiJhbWFuLnByYWphcGF0aTcyNkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6ImFtYW4ifQ.ux0EL5rB7XcW0CNCDW3BogkzmhOvCVbiVOa06tbF_TI";
+        var weavy = new Weavy({ jwt: sub });
+        var space = weavy.space({ key: "demo" });
+        space.app({
+            key: "a",
+            type: "posts",
+            container: "#feed-placeholder"
+        });
+
+
+    </script>
+</body>
+
+</html>
